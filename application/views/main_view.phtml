@@ -1,0 +1,46 @@
+<div class="flexslider">
+    <ul class="slides">
+        <?php foreach($data as $row){ ?>
+            <li>
+                <div class="overlay"></div>
+                <img src="<?php echo $row['images'] ?>" alt="Special 1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4">
+                            <div class="flex-caption visible-lg">
+                                <span class="price"><?php echo $row['cena'] ?></span>
+                                <h3 class="title"><?php echo $row['name'] ?></h3>
+                                <p><?php echo $row['text'] ?></p>
+                                <a href="<?php echo $row['url'] ?>" class="slider-btn"><?php echo $row['next'] ?></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <?php } ?>
+    </ul>
+</div> <!-- /.flexslider -->
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="our-listing owl-carousel">
+            <?php foreach($data2 as $row){ ?>
+                <div class="list-item">
+                    <div class="list-thumb">
+                        <div class="title">
+                            <h4><?php echo $row['name'] ?></h4>
+                        </div>
+                        <img src="<?php echo $row['images'] ?>" alt="destination 1">
+                    </div> <!-- /.list-thumb -->
+                    <div class="list-content">
+                        <h5><?php echo $row['text'] ?></h5>
+                        <span><?php echo $row['text2'] ?></span>
+                        <a href="<?php echo $row['url'] ?>" class="price-btn"><?php echo $row['cena'] ?></a>
+                    </div> <!-- /.list-content -->
+                </div> <!-- /.list-item -->
+            <?php } ?>
+        </div> <!-- /.our-listing -->
+    </div> <!-- /.row -->
+</div> <!-- /.container -->
